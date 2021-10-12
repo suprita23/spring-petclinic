@@ -31,6 +31,10 @@ project {
 
     buildType(VerifyPipeline)
     buildType(Build)
+
+    params {
+        param("teamcity.configsDsl.singleSettingsKts.maxNumberOfEntities", "0")
+    }
 }
 
 object Build : BuildType({
