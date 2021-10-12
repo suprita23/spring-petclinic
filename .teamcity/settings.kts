@@ -54,4 +54,8 @@ object Build : BuildType({
 object VerifyPipeline : BuildType({
     name = "verifyPipeline"
     description = "Verify TeamCity Pipeline"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
 })
