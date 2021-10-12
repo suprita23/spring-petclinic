@@ -28,6 +28,7 @@ version = "2021.1"
 
 project {
 
+    buildType(VerifyPipeline)
     buildType(Build)
 }
 
@@ -48,4 +49,9 @@ object Build : BuildType({
         vcs {
         }
     }
+})
+
+object VerifyPipeline : BuildType({
+    name = "verifyPipeline"
+    description = "Verify TeamCity Pipeline"
 })
